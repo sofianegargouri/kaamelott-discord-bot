@@ -1,15 +1,15 @@
 import Discord from 'discord.js'
 import dotenv from 'dotenv'
-import KaamelotHandler from './handlers/kaamelot-handler'
+import KaamelottHandler from './handlers/kaamelott-handler'
 
 const client = new Discord.Client()
 
 dotenv.config()
 
 client.on('ready', () =>
-  client.user.setActivity('Kaamelot', {type: 'WATCHING'}))
+  client.user.setActivity('Kaamelott', {type: 'WATCHING'}))
 
 client.on('message', message => 
-  message.content.startsWith('!kaamelot') && new KaamelotHandler({ message }))
+  message.content.startsWith('!kaamelott') && new KaamelottHandler({ message }))
 
 client.login(process.env.DISCORD_TOKEN)

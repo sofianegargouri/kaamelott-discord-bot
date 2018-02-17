@@ -1,4 +1,4 @@
-# Kaamelot Discord Bot
+# Kaamelott Discord Bot
 
 https://discordapp.com/api/oauth2/authorize?client_id=414216961799487488&permissions=3164160&scope=bot
 
@@ -6,12 +6,12 @@ https://discordapp.com/api/oauth2/authorize?client_id=414216961799487488&permiss
 
 ### Asking for help
 
-`!kaamelot help`
+`!kaamelott help`
 
 ### List of available sounds
 
-`!kaamelot list`
+`!kaamelott list`
 
 ### Play a sound
 
-`!kaamelot <sound>`
+`!kaamelott <sound>`

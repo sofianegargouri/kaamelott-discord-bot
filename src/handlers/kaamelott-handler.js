@@ -2,9 +2,9 @@ import { RichEmbed } from 'discord.js'
 import path from 'path'
 import RootHandler from './root-handler'
 
-import kaamelotSounds from '../sounds/sounds.json'
+import kaamelottSounds from '../sounds/sounds.json'
 
-export default class KaamelotHandler extends RootHandler {
+export default class KaamelottHandler extends RootHandler {
   constructor(props) {
     super(props)
 
@@ -24,13 +24,13 @@ export default class KaamelotHandler extends RootHandler {
 
   helpHandler() {
     this.message.channel.send(`
-\`!kaamelot list\`: Liste des sons
-\`!kaamelot <son>\`: Jouer un son (ne pas mettre le .mp3)
+\`!kaamelott list\`: Liste des sons
+\`!kaamelott <son>\`: Jouer un son (ne pas mettre le .mp3)
     `)
   }
 
   listHandler() {
-    kaamelotSounds.map(sound => this.message.author.send(new RichEmbed({
+    kaamelottSounds.map(sound => this.message.author.send(new RichEmbed({
       title: sound.title,
       description: `\`${sound.file}\``,
       fields: [
