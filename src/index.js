@@ -10,6 +10,8 @@ client.on('ready', () =>
   client.user.setActivity('Kaamelott', {type: 'WATCHING'}))
 
 client.on('message', message => 
-  message.content.startsWith('!kaamelott') && new KaamelottHandler({ message }))
+  (message.content.startsWith('!kaamelott')
+  || message.content.startsWith('!kmlt'))
+  && new KaamelottHandler({ message }))
 
 client.login(process.env.DISCORD_TOKEN)
