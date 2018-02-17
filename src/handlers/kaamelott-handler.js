@@ -1,6 +1,8 @@
 import path from 'path'
 import RootHandler from './root-handler'
 
+import kaamelottSounds from '../sounds/sounds.json'
+
 export default class KaamelottHandler extends RootHandler {
   constructor(props) {
     super(props)
@@ -12,6 +14,8 @@ export default class KaamelottHandler extends RootHandler {
     switch(this.message.splitContent[1]) {
       case 'help':
         return this.helpHandler()
+      case 'random':
+        return this.randomHandler()
       default:
         return this.soundHandler()
     }
@@ -25,8 +29,16 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
     `)
   }
 
+  randomHandler() {
+    this.playSound(kaamelottSounds[Math.floor(Math.random()*kaamelottSounds.length)].file)
+  }
+
   soundHandler() {
-    const sound = `${this.message.splitContent[1]}.mp3`
+    this.playSound(`${this.message.splitContent[1]}.mp3`)
+    
+  }
+
+  playSound(sound) {
     const { voiceChannel } = this.message.member
     voiceChannel.join()
       .then(connection => {
