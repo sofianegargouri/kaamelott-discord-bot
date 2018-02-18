@@ -31,7 +31,9 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
   }
 
   randomHandler() {
-    this.playSound(kaamelottSounds[Math.floor(Math.random()*kaamelottSounds.length)].file)
+    const sound = kaamelottSounds[Math.floor(Math.random()*kaamelottSounds.length)].file
+    this.playSound(sound)
+    this.message.channel.send(`Joue **${sound}**`)
   }
 
   soundHandler() {
