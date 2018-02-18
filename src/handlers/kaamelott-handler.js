@@ -41,10 +41,14 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
 
   playSound(sound) {
     const { voiceChannel } = this.message.member
-    voiceChannel.join()
-      .then(connection => {
-        const dispatcher = connection.playFile(path.resolve(`src/sounds/${sound}`))
-        dispatcher.on('end', () => voiceChannel.leave())
-      })
+    if (voiceChannel) {
+      voiceChannel.join()
+        .then(connection => {
+          const dispatcher = connection.playFile(path.resolve(`src/sounds/${sound}`))
+          dispatcher.on('end', () => voiceChannel.leave())
+        })
+    } else {
+      this.message.channel.send('You must be in a vocal channel first')
+    }
   }
 }

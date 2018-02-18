@@ -15,3 +15,4 @@ List of sounds: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
 ### Play a sound
 
 `!kaamelott <sound>`
+`!kaamelott random`
