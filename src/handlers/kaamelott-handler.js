@@ -26,6 +26,7 @@ export default class KaamelottHandler extends RootHandler {
 Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/master/src/sounds
 
 \`!kaamelott <son>\`: Jouer un son (ne pas mettre le .mp3)
+\`!kaamelott random\`: Jouer un son aléatoire
     `)
   }
 
