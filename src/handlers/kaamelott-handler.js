@@ -35,8 +35,16 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
   }
 
   soundHandler() {
-    this.playSound(`${this.message.splitContent[1]}.mp3`)
-    
+    if (isNaN(this.message.splitContent[1])) {
+      this.playSound(`${this.message.splitContent[1]}.mp3`)
+    } else {
+      const sound = kaamelottSounds[parseInt(this.message.splitContent[1])]
+      if (sound) {
+        this.playSound(sound.file)
+      } else {
+        this.message.channel.send('Not an existing sound')
+      }
+    }
   }
 
   playSound(sound) {
