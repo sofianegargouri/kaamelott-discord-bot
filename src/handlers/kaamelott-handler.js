@@ -15,6 +15,7 @@ export default class KaamelottHandler extends RootHandler {
       case 'help':
         return this.helpHandler()
       case 'random':
+      case undefined:
         return this.randomHandler()
       default:
         return this.soundHandler()
