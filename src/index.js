@@ -15,6 +15,7 @@ client.on('ready', () => {
     } else {
       client.user.setActivity('!kmlt help', {type: 'PLAYING'})
     }
+    watching = !watching
   }, 5000)
 })
 
