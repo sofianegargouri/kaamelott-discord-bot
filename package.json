@@ -17,7 +17,8 @@
     "ffmpeg-static": "^4.2.7"
   },
   "scripts": {
-    "lint": "eslint src/* --fix",
+    "lint": "eslint 'src/**/*.js'",
+    "lint:fix": "eslint 'src/**/*.js' --fix",
     "start": "babel-node src/index.js"
   }
 }

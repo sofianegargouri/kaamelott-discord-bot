@@ -1,6 +1,4 @@
-import path from 'path'
 import RootHandler from './root-handler'
-
 import kaamelottSounds from '../sounds/sounds.json'
 
 export default class KaamelottHandler extends RootHandler {
