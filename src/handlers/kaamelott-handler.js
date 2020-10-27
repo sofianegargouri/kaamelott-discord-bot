@@ -56,7 +56,7 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
       channel.join()
         .then(connection => {
           const dispatcher = connection.play(`src/sounds/${sound}`)
-          dispatcher.on('close', () => voiceChannel.leave())
+          dispatcher.on('finish', () => channel.leave())
         })
     } else {
       this.message.channel.send('You must be in a vocal channel first')
