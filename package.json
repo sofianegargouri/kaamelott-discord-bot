@@ -11,10 +11,10 @@
     "eslint": "^4.17.0"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.3.3",
     "axios": "^0.17.1",
     "discord.js": "^11.3.0",
-    "dotenv": "^5.0.0",
-    "node-opus": "^0.2.7"
+    "dotenv": "^5.0.0"
   },
   "scripts": {
     "lint": "eslint src/* --fix",
