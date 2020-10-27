@@ -14,7 +14,9 @@
     "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.4.1",
     "dotenv": "^5.0.0",
-    "ffmpeg-static": "^4.2.7"
+    "ffmpeg-static": "^4.2.7",
+    "js-search": "^2.0.0",
+    "lodash": "^4.17.20"
   },
   "scripts": {
     "lint": "eslint src/* --fix",

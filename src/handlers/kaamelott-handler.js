@@ -1,7 +1,14 @@
-import path from 'path'
+import * as JsSearch from 'js-search';
 import RootHandler from './root-handler'
 
 import kaamelottSounds from '../sounds/sounds.json'
+import { head, isEmpty } from 'lodash';
+
+const search = new JsSearch.Search('character');
+search.addIndex('episode');
+search.addIndex('file');
+search.addIndex('title')
+search.addDocuments(kaamelottSounds)
 
 export default class KaamelottHandler extends RootHandler {
   constructor(props) {
@@ -45,7 +52,12 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
       if (sound) {
         this.playSound(sound.file)
       } else {
-        this.message.channel.send('Not an existing sound')
+        const searchResult = search.search(this.message.splitContent[1])
+        if (isEmpty(searchResult)) {
+          this.message.channel.send('Not an existing sound')
+        } else {
+          this.playSound(head(searchResult))
+        }
       }
     }
   }
