@@ -51,12 +51,12 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
   }
 
   playSound(sound) {
-    const { voiceChannel } = this.message.member
-    if (voiceChannel) {
-      voiceChannel.join()
+    const { voice: {channel} } = this.message.member
+    if (channel) {
+      channel.join()
         .then(connection => {
-          const dispatcher = connection.playFile(path.resolve(`src/sounds/${sound}`))
-          dispatcher.on('end', () => voiceChannel.leave())
+          const dispatcher = connection.play(`src/sounds/${sound}`)
+          dispatcher.on('close', () => voiceChannel.leave())
         })
     } else {
       this.message.channel.send('You must be in a vocal channel first')
