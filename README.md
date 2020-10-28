@@ -21,10 +21,16 @@ This bot is triggered by either `!kaamelott` or `!kmlt`
 `!kaamelott <sound>`
 `!kaamelott random`
 
+## Cloning repo
+
+Be sure to use the --recursive option when cloning to ensure to clone sub modules
+
+git clone --recursive git@github.com:sofianegargouri/kaamelott-discord-bot.git
+
 ## Contributing
 
 ```
-git clone git@github.com:sofianegargouri/kaamelott-discord-bot.git
+git clone --recursive git@github.com:sofianegargouri/kaamelott-discord-bot.git
 cd kaamelott-discord-bot
 yarn
 echo "DISCORD_TOKEN=<YOUR DISCORD API BOT TOKEN>" > .env
