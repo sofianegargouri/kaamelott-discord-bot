@@ -1,8 +1,0 @@
-bower_components
-dist
-node_modules
-.gitconfig
-*.swp
-.DS_STORE
-.idea/
-package-lock.json
