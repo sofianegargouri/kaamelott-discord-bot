@@ -1,5 +1,5 @@
 import RootHandler from './root-handler'
-import kaamelottSounds from '../sounds/sounds.json'
+import kaamelottSounds from '../sounds/sounds/sounds.json'
 
 export default class KaamelottHandler extends RootHandler {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class KaamelottHandler extends RootHandler {
 
   helpHandler() {
     this.message.channel.send(`
-Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/master/src/sounds
+Liste des sons: https://github.com/2ec0b4/kaamelott-soundboard/tree/master/sounds
 
 \`!kaamelott <son>\`: Jouer un son (ne pas mettre le .mp3)
 \`!kaamelott random\`: Jouer un son aléatoire
@@ -53,7 +53,7 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
     if (channel) {
       channel.join()
         .then(connection => {
-          const dispatcher = connection.play(`src/sounds/${sound}`)
+          const dispatcher = connection.play(`src/sounds/sounds/${sound}`)
           dispatcher.on('finish', () => channel.leave())
         })
     } else {
