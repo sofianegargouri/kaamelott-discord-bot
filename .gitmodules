@@ -1,3 +1,3 @@
 [submodule "kaamelott-soundboard"]
-	path = kaamelott-soundboard
+	path = src/sounds
 	url = https://github.com/2ec0b4/kaamelott-soundboard.git
