@@ -38,9 +38,9 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
   soundHandler() {
     if (isNaN(this.message.splitContent[1])) {
       if (kaamelottSounds.some(sound => sound.file === `${this.message.splitContent[1]}.mp3`)) {
-        this.playSound(`${this.message.splitContent[1]}.mp3`);
+        this.playSound(`${this.message.splitContent[1]}.mp3`)
       } else {
-        this.searchSound();
+        this.searchSound()
       }
     } else {
       const sound = kaamelottSounds[parseInt(this.message.splitContent[1])]
@@ -54,15 +54,15 @@ Liste des sons: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
 
   normalize(string) {
     return string.toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   }
 
   searchSound() {
-    const [command, ...searchWords] = this.message.splitContent;
+    const [, ...searchWords] = this.message.splitContent
     const found = kaamelottSounds.some(sound => {
       if (this.normalize(sound.title).indexOf(this.normalize(searchWords.join(' '))) !== -1) {
         this.playSound(sound.file)
-        return true;
+        return true
       }
     })
 
