@@ -10,16 +10,16 @@ List of sounds: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/ma
 
 ## Usage
 
-This bot is triggered by either `!kaamelott` or `!kmlt`
+This bot is triggered by either `/kaamelott` or `/kmlt`
 
 ### Asking for help
 
-`!kaamelott help`
+`/kaamelott help`
 
 ### Play a sound
 
-`!kaamelott <sound>`
-`!kaamelott random`
+`/kaamelott <sound>`
+`/kaamelott random`
 
 ## Cloning repo
 

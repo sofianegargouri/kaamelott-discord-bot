@@ -24,8 +24,8 @@ export default class KaamelottHandler extends RootHandler {
     this.message.channel.send(`
 Liste des sons: https://github.com/2ec0b4/kaamelott-soundboard/tree/master/sounds
 
-\`!kaamelott <son>\`: Jouer un son (ne pas mettre le .mp3)
-\`!kaamelott random\`: Jouer un son aléatoire
+\`/kaamelott <son>\`: Jouer un son (ne pas mettre le .mp3)
+\`/kaamelott random\`: Jouer un son aléatoire
     `)
   }
 
