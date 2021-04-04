@@ -3,12 +3,15 @@ import dotenv from 'dotenv'
 import KaamelottHandler from './handlers/kaamelott-handler'
 
 const client = new Discord.Client()
+client.commands = new Discord.Collection()
 
 let watching = true
 
 dotenv.config()
 
-client.on('ready', () => {
+client.once('ready', () => {
+  client.commands.set('kaamelott')
+  client.commands.set('kmlt')
   setInterval(() => {
     if (watching) {
       client.user.setActivity('Kaamelott', {type: 'WATCHING'})

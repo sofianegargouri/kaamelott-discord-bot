@@ -4,7 +4,7 @@
 
 Inspired by: https://kaamelott-soundboard.2ec0b4.fr/ / https://github.com/2ec0b4/kaamelott-soundboard
 
-Invite the bot on your server: https://discordapp.com/api/oauth2/authorize?client_id=414216961799487488&permissions=3164160&scope=bot
+Invite the bot on your server: https://discordapp.com/api/oauth2/authorize?client_id=414216961799487488&permissions=2150696960&scope=bot
 
 List of sounds: https://github.com/sofianegargouri/kaamelott-discord-bot/tree/master/src/sounds
 
