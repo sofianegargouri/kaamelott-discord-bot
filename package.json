@@ -11,7 +11,7 @@
     "eslint": "^7.12.1"
   },
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
+    "@discordjs/opus": "^0.8.0",
     "axios": "^0.21.1",
     "discord.js": "^12.5.3",
     "dotenv": "^5.0.0",
